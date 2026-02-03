@@ -18,6 +18,7 @@ Each package version lives under `{name}/{version}/manifest.json` and describes 
 
 | Package | Versions | License |
 | --- | --- | --- |
+| cpython | 3.12.8 | PSF-2.0 |
 | openssl | 3.2.0 | Apache-2.0 |
 | tdlib | 1.8.0 | Boost-1.0 |
 | zlib | 1.3.1 | Zlib |
