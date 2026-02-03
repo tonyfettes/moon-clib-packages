@@ -10,6 +10,9 @@
       "dest": "td"
     }
   ],
+  "dependencies": {
+    "openssl": "3.2.0"
+  },
   "build": [
     {
       "run": [
