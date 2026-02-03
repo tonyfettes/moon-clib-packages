@@ -39,6 +39,7 @@ Each package version lives under `{name}/{version}/manifest.json` and describes 
   - `run`: Array of command + args.
   - `cwd`: Working directory for the step.
   - `when`: Optional platform selector (e.g. `{ "os": "linux", "arch": "x86_64" }`).
+  - `env`: Step-specific environment variables (values support `${VAR}` expansion).
 
 Build steps can reference a few environment variables commonly used by the tooling:
 
