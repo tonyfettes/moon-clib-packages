@@ -1,0 +1,38 @@
+{
+  "license": "Boost-1.0",
+  "homepage": "https://github.com/tdlib/td",
+  "source": [
+    {
+      "type": "git",
+      "url": "https://github.com/tdlib/td.git",
+      "ref": "v1.8.0",
+      "shallow": true,
+      "dest": "td"
+    }
+  ],
+  "build": [
+    {
+      "run": [
+        "cmake",
+        "-S",
+        "td",
+        "-B",
+        "td/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_INSTALL_PREFIX=${PREFIX}",
+        "-DCMAKE_PREFIX_PATH=${PREFIX}",
+        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ]
+    },
+    {
+      "run": ["cmake", "--build", "td/build", "-j${JOBS}"]
+    },
+    {
+      "run": [
+        "sh",
+        "-c",
+        "DESTDIR=${DESTDIR} cmake --install td/build"
+      ]
+    }
+  ]
+}
